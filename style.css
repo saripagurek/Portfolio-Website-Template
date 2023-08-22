@@ -14,6 +14,15 @@ body {
   background-color: #F8B219;
 }
 
+#sketch{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-color: #F8B219;
+  display: block;
+}
+
 .landing {
   align-items: center;
   min-height: 100vh;
@@ -35,7 +44,7 @@ body {
   padding-right: 20vw;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 25px;
 }
 
 .about h1 {
@@ -46,6 +55,11 @@ body {
   color: #E7E9EB;
 }
 
+.placeholder {
+  width: 100px;
+  height: 270px;
+}
+
 .projects {
   background-color: #337CCF;
   padding: 10vw;
@@ -53,7 +67,8 @@ body {
   padding-right: 20vw;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 25px;
+  position: relative;
 }
 
 .footer {
@@ -68,9 +83,45 @@ body {
   justify-content: center;
 }
 
+.decorations {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.decorations2 {
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.decorations_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.decorations2_row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.decorations img {
+  width: 6vw;
+  margin: 10px;
+}
+
+.decorations2 img {
+  width: 6vw;
+  margin: 10px;
+}
+
 h1{
   font-family: 'Roboto Slab', serif;
-  font-size: 32px;
+  font-size: 42px;
   color: #272829;
   font-weight: bold;
 }
@@ -190,11 +241,14 @@ h4{
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   display: inline-block;
   margin: 5px;
+  border-style: solid;
+  border-width: medium;
+  border-color: #272829;
 }
 
 .scroll_arrow {
@@ -274,6 +328,14 @@ h4{
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .decorations {
+    display: none;
+  }
+
+  .decorations2 {
+    display: none;
   }
 
 }
